@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — Nathan Daniel Schiele</title>
+<style>
+  :root {
+    --paper: #FBFAF7; --ink: #191715; --halfgray: #6B645C;
+    --rule: #DCD5C9; --accent: #5A2D60;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L",
+             P052, "TeX Gyre Pagella", Georgia, serif;
+  }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--serif); font-size: 17px; line-height: 1.65;
+    text-align: center; padding: 2rem;
+  }
+  .eyebrow {
+    font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--halfgray); margin: 0 0 1rem;
+  }
+  h1 {
+    font-size: 1.5rem; font-weight: 400; letter-spacing: 0.09em;
+    text-transform: uppercase; margin: 0 0 1.4rem;
+  }
+  p { color: var(--halfgray); margin: 0 0 1.6rem; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:hover { color: var(--ink); }
+  /* ---------- deco rule, after the cover's foot border ---------- */
+
+  .deco { display: block; margin: 2.6rem auto; max-width: 100%; }
+  .deco g { fill: none; stroke: var(--accent); stroke-width: 1.1; }
+
+</style>
+</head>
+<body>
+  <main>
+    <svg class="deco" width="260" height="16" viewBox="0 0 260 16" aria-hidden="true">
+    <g>
+      <circle cx="5" cy="8" r="3.5"/>
+      <path d="M11 8 H116"/>
+      <path d="M122 2.5 L138 13.5 M138 2.5 L122 13.5"/>
+      <path d="M144 8 H249"/>
+      <circle cx="255" cy="8" r="3.5"/>
+    </g>
+  </svg>
+    <p class="eyebrow">404</p>
+    <h1>No such page</h1>
+    <p>That path doesn&rsquo;t lead anywhere.</p>
+    <p><a href="/">Back to the beginning</a></p>
+  </main>
+</body>
+</html>

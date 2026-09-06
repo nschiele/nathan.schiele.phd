@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP — Doctoral defense of Nathan Daniel Schiele</title>
+  <meta name="description"
+    content="RSVP for the public defense of the doctoral thesis of Nathan Daniel Schiele, Universiteit Leiden, 2 December 2026.">
+  <meta name="robots" content="noindex">
+
+  <!-- ============================================================
+     CONFIGURE THIS ONE LINE, then the page works.
+     Paste the /exec URL from your Apps Script deployment.
+     ============================================================ -->
+  <script>
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbz_eO0ndh4Eu_7Lj-CY57cm4OC1sgp8MbvU-AVmO3udJV-nKlBFkZ6Qlhi1LdFvOr9v/exec";
+  </script>
+
+  <style>
+    :root {
+      --paper: #FBFAF7;
+      --ink: #191715;
+      --halfgray: #6B645C;
+      --rule: #DCD5C9;
+      --accent: #59356F;
+      --wash: #F1EBF5;
+      --error: #8C2F2F;
+
+      --serif: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L",
+        P052, "TeX Gyre Pagella", Georgia, serif;
+
+      --measure: 34rem;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 6rem;
+    }
+
+    /* ---------- shared typographic devices ---------- */
+
+    .smallcaps {
+      font-variant: small-caps;
+      letter-spacing: 0.16em;
+      text-transform: lowercase;
+    }
+
+    .eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--halfgray);
+      margin: 0 0 1.4rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: var(--ink);
+    }
+
+    /* ---------- title block: a miniature of the thesis title page ---------- */
+
+    .titleblock {
+      text-align: center;
+    }
+
+    .titleblock h1 {
+      font-size: clamp(1.5rem, 5.2vw, 2rem);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 0 0 2rem;
+    }
+
+    .titleblock h1 .sub {
+      display: block;
+      margin-top: 0.35em;
+    }
+
+    .formula {
+      color: var(--halfgray);
+      font-size: 0.98rem;
+      line-height: 1.85;
+      margin: 0 0 2rem;
+    }
+
+    .formula strong {
+      color: var(--ink);
+      font-weight: 400;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+    }
+
+    .rules {
+      border: 0;
+      margin: 2.2rem 0;
+    }
+
+    .rules::before,
+    .rules::after {
+      content: "";
+      display: block;
+      border-top: 1px solid var(--rule);
+    }
+
+    .rules::after {
+      margin-top: 3px;
+      border-top-width: 2px;
+    }
+
+    /* ---------- the tree mark: signature element ---------- */
+
+    .mark {
+      display: block;
+      margin: 2.4rem auto;
+    }
+
+    .mark .edge {
+      stroke: var(--rule);
+      stroke-width: 1.25;
+      fill: none;
+    }
+
+    .mark .conj {
+      stroke: var(--halfgray);
+      stroke-width: 1.25;
+      fill: none;
+    }
+
+    .mark .node {
+      fill: var(--paper);
+      stroke: var(--halfgray);
+      stroke-width: 1.25;
+    }
+
+    .mark .root {
+      fill: var(--accent);
+      stroke: var(--accent);
+    }
+
+    /* ---------- details list ---------- */
+
+    .details {
+      margin: 0 0 2.6rem;
+    }
+
+    .details dl {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 0.55rem 1.25rem;
+      margin: 0;
+    }
+
+    .details dt {
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--halfgray);
+      padding-top: 0.28em;
+    }
+
+    .details dd {
+      margin: 0;
+    }
+
+    .details dd .note {
+      display: block;
+      color: var(--halfgray);
+      font-size: 0.9rem;
+    }
+
+    /* ---------- section heads ---------- */
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      font-variant: small-caps;
+      letter-spacing: 0.18em;
+      margin: 0 0 1.4rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ---------- form ---------- */
+
+    .field {
+      margin: 0 0 1.75rem;
+    }
+
+    .field>label,
+    fieldset>legend {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--halfgray);
+      margin: 0 0 0.5rem;
+      padding: 0;
+    }
+
+    .hint {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--halfgray);
+      margin: 0.35rem 0 0;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1rem;
+      color: var(--ink);
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--rule);
+      border-radius: 0;
+      padding: 0.45rem 0.1rem;
+      transition: border-color 120ms ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-bottom-color: var(--accent);
+      border-bottom-width: 2px;
+      padding-bottom: calc(0.45rem - 1px);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 4.5rem;
+      line-height: 1.55;
+    }
+
+    input[type="number"] {
+      max-width: 5rem;
+    }
+
+    /* radios as typographic options, not chrome */
+
+    fieldset {
+      border: 0;
+      margin: 0 0 1.75rem;
+      padding: 0;
+    }
+
+    .options {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    .option {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      padding: 0.55rem 0.7rem;
+      margin-left: -0.7rem;
+      cursor: pointer;
+      transition: background-color 120ms ease;
+    }
+
+    .option:hover {
+      background: var(--wash);
+    }
+
+    .option input {
+      accent-color: var(--accent);
+      margin: 0;
+      flex: none;
+    }
+
+    .option span {
+      line-height: 1.45;
+    }
+
+    .option span small {
+      display: block;
+      color: var(--halfgray);
+      font-size: 0.86rem;
+    }
+
+    /* honeypot */
+    .trap {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* button */
+
+    button {
+      font-family: inherit;
+      font-size: 0.86rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 0;
+      padding: 0.85rem 2rem;
+      cursor: pointer;
+      transition: background-color 120ms ease, color 120ms ease;
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: progress;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* messaging */
+
+    .formerror {
+      color: var(--error);
+      font-size: 0.92rem;
+      margin: 1.1rem 0 0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .colophon {
+      margin-top: 4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--halfgray);
+    }
+
+    /* confirmation */
+
+    .confirm {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .confirm h2 {
+      border: 0;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .confirm p {
+      color: var(--halfgray);
+      margin: 0 auto 0.9rem;
+      max-width: 26rem;
+    }
+
+    @media (max-width: 30rem) {
+      .page {
+        padding-top: 3rem;
+      }
+
+      .details dl {
+        grid-template-columns: 1fr;
+        gap: 0.2rem 0;
+      }
+
+      .details dt {
+        padding-top: 0.9rem;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- ===================== TITLE BLOCK ===================== -->
+    <header class="titleblock">
+      <p class="eyebrow">Universiteit Leiden</p>
+
+      <h1>
+        Attack&#8209;Defense Trees
+        <span class="sub">A Practical Threat Model</span>
+      </h1>
+
+      <p class="formula">
+        You are warmly invited to the public defense<br>
+        of the doctoral thesis of<br>
+        <strong>Nathan Daniel Schiele</strong>
+      </p>
+
+      <hr class="rules">
+    </header>
+
+    <!-- ===================== THE MARK ===================== -->
+    <svg class="mark" width="76" height="42" viewBox="0 0 76 42" aria-hidden="true">
+      <path class="edge" d="M38 12 L16 30 M38 12 L60 30" />
+      <path class="conj" d="M26 21 A 16 16 0 0 0 50 21" />
+      <circle class="node root" cx="38" cy="9" r="4" />
+      <circle class="node" cx="15" cy="33" r="4" />
+      <circle class="node" cx="61" cy="33" r="4" />
+    </svg>
+
+    <!-- ===================== DETAILS ===================== -->
+    <section class="details">
+      <dl>
+        <dt>When</dt>
+        <dd>
+          Wednesday 2 December 2026, 11:30
+          <span class="note">Please be seated by 11:15 — the doors close on the hour and the ceremony runs for exactly
+            45 minutes.</span>
+        </dd>
+
+        <dt>Where</dt>
+        <dd>
+          Groot Auditorium, Academiegebouw<br>
+          Rapenburg 73, 2311 GJ Leiden
+        </dd>
+
+        <dt>Reception</dt>
+        <dd>
+          <!-- EDIT: restaurant name, address, and time -->
+          TBD, from approximately 13:00
+        </dd>
+
+        <dt>Promotor</dt>
+        <dd>Prof.dr.ir. N. Mentens<span class="note">Co-promotor: Dr. O. Gadyatskaya</span></dd>
+      </dl>
+    </section>
+
+    <!-- ===================== FORM ===================== -->
+    <section id="formsection">
+      <h2>Reply</h2>
+
+      <p class="hint" style="margin-bottom:1.8rem">
+        <!-- EDIT: deadline -->
+        Please reply by <strong>October 3rd</strong> so seating and catering can be confirmed.
+      </p>
+
+      <form id="rsvp" novalidate>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="hint">Used only to send you any practical updates before the day.</span>
+        </div>
+
+        <fieldset>
+          <legend>Will you be joining?</legend>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="attending" value="Ceremony only">
+              <span>Ceremony only<small>The defense in the Academiegebouw</small></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="attending" value="Ceremony and reception" required>
+              <span>Ceremony and reception<small>The full day</small></span>
+            </label>
+            <label class="option">
+              <input type="radio" name="attending" value="Cannot attend">
+              <span>I can&rsquo;t make it</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field" id="dietfield" hidden>
+          <label for="diet">Anything I should tell the caterer?</label>
+          <input type="text" id="diet" name="diet">
+          <span class="hint">Allergies, dietary requirements, or accessibility needs.</span>
+        </div>
+
+        <div class="field">
+          <label for="note">A note for Nathan</label>
+          <textarea id="note" name="note" rows="3"></textarea>
+        </div>
+
+        <!-- spam trap: hidden from people, filled by bots -->
+        <div class="trap" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" id="submit">Send reply</button>
+        <p class="formerror" id="error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <!-- ===================== CONFIRMATION ===================== -->
+    <section class="confirm" id="confirmation" hidden>
+      <svg class="mark" width="76" height="42" viewBox="0 0 76 42" aria-hidden="true">
+        <path class="edge" d="M38 12 L16 30 M38 12 L60 30" />
+        <path class="conj" d="M26 21 A 16 16 0 0 0 50 21" />
+        <circle class="node root" cx="38" cy="9" r="4" />
+        <circle class="node root" cx="15" cy="33" r="4" />
+        <circle class="node root" cx="61" cy="33" r="4" />
+      </svg>
+      <h2>Your reply is in</h2>
+      <p id="confirmtext"></p>
+      <p>To change anything, just submit the form again with the same email address, or write to
+        <a href="mailto:n.d.schiele@liacs.leidenuniv.nl">n.d.schiele@liacs.leidenuniv.nl</a>.
+      </p>
+    </section>
+
+
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var form = document.getElementById("rsvp");
+      var formSection = document.getElementById("formsection");
+      var confirmation = document.getElementById("confirmation");
+      var confirmText = document.getElementById("confirmtext");
+      var errorBox = document.getElementById("error");
+      var button = document.getElementById("submit");
+
+      var dietField = document.getElementById("dietfield");
+
+      // --- conditional fields -------------------------------------------------
+
+      function currentAnswer() {
+        var picked = form.querySelector('input[name="attending"]:checked');
+        return picked ? picked.value : "";
+      }
+
+      function refresh() {
+        var answer = currentAnswer();
+        var eating = answer === "Ceremony and reception" || answer === "Reception only";
+        dietField.hidden = !eating;
+      }
+
+      form.addEventListener("change", function (e) {
+        if (e.target.name === "attending") refresh();
+      });
+
+      // --- validation ---------------------------------------------------------
+
+      function validate(data) {
+        if (!data.name.trim()) return "Please add your name.";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim()))
+          return "That email address doesn't look right — please check it.";
+        if (!data.attending) return "Please let me know whether you can join.";
+        return null;
+      }
+
+      // --- submit -------------------------------------------------------------
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        errorBox.hidden = true;
+
+        var data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          attending: currentAnswer(),
+          diet: dietField.hidden ? "" : document.getElementById("diet").value,
+          note: document.getElementById("note").value,
+          website: document.getElementById("website").value,   // honeypot
+          page: location.href
+        };
+
+        var problem = validate(data);
+        if (problem) {
+          errorBox.textContent = problem;
+          errorBox.hidden = false;
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Sending\u2026";
+
+        // text/plain keeps this a "simple" request, so the browser skips the
+        // CORS preflight that Apps Script web apps cannot answer.
+        fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(data)
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (result) {
+            if (!result || result.ok !== true) throw new Error(result && result.error);
+
+            var coming = data.attending !== "Cannot attend";
+            confirmText.textContent = coming
+              ? "Thank you — you're on the list. I'll send the practical details closer to the date."
+              : "Thank you for letting me know. You'll be missed, and I'll send you the thesis.";
+
+            formSection.hidden = true;
+            confirmation.hidden = false;
+            confirmation.scrollIntoView({ block: "center" });
+          })
+          .catch(function () {
+            button.disabled = false;
+            button.textContent = "Send reply";
+            errorBox.innerHTML =
+              'That didn\u2019t send. Please try once more, or email ' +
+              '<a href="mailto:n.d.schiele@liacs.leidenuniv.nl">n.d.schiele@liacs.leidenuniv.nl</a> ' +
+              'and I\u2019ll add you by hand.';
+            errorBox.hidden = false;
+          });
+      });
+
+      refresh();
+    })();
+  </script>
+</body>
+
+</html>
