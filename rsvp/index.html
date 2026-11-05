@@ -396,6 +396,29 @@
       max-width: 26rem;
     }
 
+    .confirm .calendar {
+      margin: 1.8rem auto 2rem;
+    }
+
+    .calbutton {
+      display: inline-block;
+      font-size: 0.86rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--paper);
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.85rem 2rem;
+      transition: background-color 120ms ease, color 120ms ease;
+    }
+
+    .calbutton:hover {
+      color: var(--paper);
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
     @media (max-width: 30rem) {
       .page {
         padding-top: 3rem;
@@ -557,6 +580,10 @@
       </svg>
       <h2>Your reply is in</h2>
       <p id="confirmtext"></p>
+      <p class="calendar" id="calendar" hidden>
+        <a class="calbutton" id="callink" href="/calendar/defense.ics">Add to calendar</a>
+        <span class="hint" id="calhint"></span>
+      </p>
       <p>To change anything, just submit the form again with the same email address, or write to
         <a href="mailto:n.d.schiele@liacs.leidenuniv.nl">n.d.schiele@liacs.leidenuniv.nl</a>.
       </p>
@@ -573,6 +600,9 @@
       var formSection = document.getElementById("formsection");
       var confirmation = document.getElementById("confirmation");
       var confirmText = document.getElementById("confirmtext");
+      var calendar = document.getElementById("calendar");
+      var calLink = document.getElementById("callink");
+      var calHint = document.getElementById("calhint");
       var errorBox = document.getElementById("error");
       var button = document.getElementById("submit");
 
@@ -646,6 +676,13 @@
             confirmText.textContent = coming
               ? "Thank you — you're on the list. I'll send the practical details closer to the date."
               : "Thank you for letting me know. You'll be missed, and I'll send you the thesis.";
+
+            var both = data.attending === "Ceremony and reception";
+            calLink.href = both ? "/calendar/defense-and-reception.ics" : "/calendar/defense.ics";
+            calHint.textContent = both
+              ? "Adds two entries on Wednesday 2 December: the defense (11:15–12:15) and the reception (13:00–16:00)."
+              : "Blocks 11:15–12:15 on Wednesday 2 December.";
+            calendar.hidden = !coming;
 
             formSection.hidden = true;
             confirmation.hidden = false;
