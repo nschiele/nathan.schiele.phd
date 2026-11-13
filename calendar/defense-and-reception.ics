@@ -5,21 +5,21 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:defense-20261202@nathan.schiele.phd
-SEQUENCE:2
-DTSTAMP:20261113T130000Z
+SEQUENCE:3
+DTSTAMP:20261113T140000Z
 DTSTART:20261202T101500Z
 DTEND:20261202T120000Z
 SUMMARY:PhD defense of Nathan Daniel Schiele
 LOCATION:Groot Auditorium\, Academiegebouw\, Rapenburg 73\, 2311 GJ Leiden
 DESCRIPTION:Public defense of the doctoral thesis "Attack-Defense Trees: A 
  Practical Threat Model"\, Universiteit Leiden.\n\nPlease be seated by 11:1
- 5\; the doors close at exactly 11:30. The defense itself lasts 45 minutes\
- , and the ceremony finishes around 12:45.
+ 5\; the doors close at exactly 11:30 and the ceremony runs for exactly 45 
+ minutes.
 END:VEVENT
 BEGIN:VEVENT
 UID:reception-20261202@nathan.schiele.phd
 SEQUENCE:0
-DTSTAMP:20261113T130000Z
+DTSTAMP:20261113T140000Z
 DTSTART:20261202T120000Z
 DTEND:20261202T150000Z
 SUMMARY:Reception: PhD defense of Nathan Daniel Schiele
