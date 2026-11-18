@@ -493,6 +493,9 @@
           Rapenburg 73, 2311 GJ Leiden
         </dd>
 
+        <dt>Livestream</dt>
+        <dd><a href="https://www.universiteitleiden.nl/en/academic-staff/livestream-phd-defence">Watch the defense online</a></dd>
+
         <dt>Reception</dt>
         <dd>
           Tab&uacute;, from approximately 13:00<br>
@@ -580,6 +583,9 @@
       </svg>
       <h2>Your reply is in</h2>
       <p id="confirmtext"></p>
+      <p id="livestream" hidden>You can still watch the defense live on the
+        <a href="https://www.universiteitleiden.nl/en/academic-staff/livestream-phd-defence">Universiteit Leiden livestream</a>.
+      </p>
       <p class="calendar" id="calendar" hidden>
         <a class="calbutton" id="callink" href="/calendar/defense.ics">Add to calendar</a>
         <span class="hint" id="calhint"></span>
@@ -601,6 +607,7 @@
       var confirmation = document.getElementById("confirmation");
       var confirmText = document.getElementById("confirmtext");
       var calendar = document.getElementById("calendar");
+      var livestream = document.getElementById("livestream");
       var calLink = document.getElementById("callink");
       var calHint = document.getElementById("calhint");
       var errorBox = document.getElementById("error");
@@ -683,6 +690,7 @@
               ? "Adds two entries on Wednesday 2 December: the defense (11:15–13:00) and the reception (13:00–16:00)."
               : "Blocks 11:15–13:00 on Wednesday 2 December.";
             calendar.hidden = !coming;
+            livestream.hidden = coming;
 
             formSection.hidden = true;
             confirmation.hidden = false;

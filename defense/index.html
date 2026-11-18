@@ -493,6 +493,9 @@
           Rapenburg 73, 2311 GJ Leiden
         </dd>
 
+        <dt>Livestream</dt>
+        <dd><a href="https://www.universiteitleiden.nl/en/academic-staff/livestream-phd-defence">Watch the defense online</a></dd>
+
         <dt>Promotor</dt>
         <dd>Prof.dr.ir. N. Mentens</dd>
 
@@ -564,6 +567,9 @@
       </svg>
       <h2>Your reply is in</h2>
       <p id="confirmtext"></p>
+      <p id="livestream" hidden>You can still watch the defense live on the
+        <a href="https://www.universiteitleiden.nl/en/academic-staff/livestream-phd-defence">Universiteit Leiden livestream</a>.
+      </p>
       <p class="calendar" id="calendar" hidden>
         <a class="calbutton" href="/calendar/defense.ics">Add to calendar</a>
         <span class="hint">Blocks 11:15&ndash;13:00 on Wednesday 2 December.</span>
@@ -585,6 +591,7 @@
       var confirmation = document.getElementById("confirmation");
       var confirmText = document.getElementById("confirmtext");
       var calendar = document.getElementById("calendar");
+      var livestream = document.getElementById("livestream");
       var errorBox = document.getElementById("error");
       var button = document.getElementById("submit");
 
@@ -645,6 +652,7 @@
               ? "Thank you — you're on the list. I'll send the practical details closer to the date."
               : "Thank you for letting me know. You'll be missed, and I'll send you the thesis.";
             calendar.hidden = !coming;
+            livestream.hidden = coming;
 
             formSection.hidden = true;
             confirmation.hidden = false;
